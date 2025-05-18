@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "redstone_api_improved",
+    "version": "${loader_safe_version}",
+    "metadata": {
+      "name": "Redstone API Improved",
+      "description": "Improved Redstone backend for developers to Develop Redstone based mods easier",
+      "contributors": {
+        "Vrglab": "Author"
+      },
+      "icon": "logo.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "init": [
+        "org.Vrglab.quilt.ExampleModQuilt"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "version": "*"
+      },
+      {
+        "id": "quilt_base",
+        "version": "*"
+      },
+      {
+        "id": "minecraft",
+        "version": ">=1.21"
+      }
+    ]
+  },
+  "mixin": [
+    "improved_redtone.mixins.json"
+  ]
+}

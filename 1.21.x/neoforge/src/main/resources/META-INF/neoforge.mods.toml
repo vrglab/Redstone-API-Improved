@@ -1,0 +1,31 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+issueTrackerURL = "https://github.com/vrglab/Redstone-API-Improved/issues"
+license = "MIT"
+
+[[mods]]
+modId = "redstone_api_improved"
+version = "${loader_safe_version}"
+displayName = "Redstone API Improved"
+authors = "Vrglab"
+description = '''
+Improved Redstone backend for developers to Develop Redstone based mods easier
+'''
+logoFile = "logo.png"
+
+[[dependencies.redstone_api_improved]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.redstone_api_improved]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[mixins]]
+config = "redstone_api_improved.mixins.json"

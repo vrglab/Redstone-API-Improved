@@ -25,5 +25,4 @@ public class RedstoneWireBlockMixin {
     private static boolean shouldConnectTo_shouldConnectTo(BlockState blockState, @Nullable Direction direction) {
         return RedstoneWireBlockMixinCommon.shouldConnectToReplaced(blockState, direction);
     }
-
 }

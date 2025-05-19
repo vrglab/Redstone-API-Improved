@@ -60,11 +60,6 @@ public class TestRedstoneBlock extends RedstoneLogicBlock {
     }
 
     @Override
-    protected int Output(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, Direction direction) {
-        return 0;
-    }
-
-    @Override
     protected BlockState PowerStateHandling(BlockState state_new, Level world, BlockPos pos) {
         Direction facing = state_new.getValue(FACING);
         Direction right, left;

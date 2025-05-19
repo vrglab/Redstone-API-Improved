@@ -42,6 +42,7 @@ public abstract class RedstoneLogicBlock extends DiodeBlock implements SetRedsto
         BlockState state_new = PowerStateHandling(state, world, pos);
         if (state_new != state) {
             world.setBlock(pos, state_new, 3);
+            onRedstoneTick();
         }
     }
 
@@ -53,7 +54,6 @@ public abstract class RedstoneLogicBlock extends DiodeBlock implements SetRedsto
 
     protected  abstract @NotNull MapCodec<? extends DiodeBlock> codec();
 
-    protected abstract int Output(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, Direction direction);
     protected abstract BlockState PowerStateHandling(BlockState state, Level world, BlockPos pos);
     protected abstract void onRedstoneTick();
 }
